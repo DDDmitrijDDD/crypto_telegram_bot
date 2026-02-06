@@ -9,4 +9,4 @@ BOT_TOKEN = str(os.getenv("TOKEN"))
 ADMINS = str(os.getenv("admins"))
 
 # id админов
-admins_id = [7683783190, 923162995]
+admins_id = []
