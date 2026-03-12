@@ -48,7 +48,6 @@ async def start_message(message: Message, state: FSMContext, command: CommandObj
             markup = await create_markup('inline', [[['Купить', 'buy'], ['Продать', 'sell']],
                                                 [['Обменять', 'trade']],
                                                 [["О нас", "we"]],
-                                                [["📚 FAQ", "url.com"]],
                                                 [["👤 Мой профиль", "profile"]]])
             photo = FSInputFile(f"photo\main.jpg", 'rb')
             name = await bot.get_me()
