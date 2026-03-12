@@ -1,9 +1,67 @@
-# crypto_telegram_bot
-My Telegram bot for buying/selling/exchanging cryptocurrency
+# Мой заказной проект телеграмм бот для покупке/продаже/обмену криптовалюты.
 
+## Стек технологий
+- **Aiogram** — для работы с Telegram-ботом.
+- **Aiosqlite** - для работы с SQLite
+- **Python-okx** - для интеграции актуального курса криптовалюты
 
-To launch the bot with full functionality, follow these instructions:
-1. In data/.env, paste your Telegram bot's token, which you should get from BotFather.
-2. In the console, type pip install -r requirements.txt
-3. In the data/config.py file, enter your Telegram ID, or multiple IDs, in the admins list.
-4. After launching the bot, either through the admin panel by clicking the button Support, add a link either through the database, which is located in the path utils/db/files/users.db, add a link to the url table
+## Переменные окружения
+
+Проект использует файл `.env` для хранения конфиденциальных данных. Пример содержимого файла:
+
+```ini
+TOKEN=**********
+```
+
+- BOT_TOKEN — токен вашего Telegram-бота.
+  ## Установка проекта
+
+1. Склонируйте репозиторий:
+
+```bash
+git clone https://github.com/DDDmitrijDDD/crypto_telegram_bot.git
+crypto_telegram_bot
+```
+
+2. Установите зависимости:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Создайте файл .env с вашими настройками (см. раздел "Переменные окружения").
+4. В файле data/config.py в список admins=[****,***,**] впишите нужное количество телеграмм id админов через запятую.
+5. Запустите приложение:
+
+```bash
+bot.py
+```
+
+## Зависимости
+
+Проект использует следующие зависимости:
+
+```txt
+python-dotenv==1.0.0
+aiogram==3.3.0
+aiosqlite==0.19.0
+validators==0.22.0
+APScheduler==3.11.0
+python-okx==3.5.0
+```
+## Коротко о функционале
+```txt
+##Функационал админа:
+1. Просмотр всех пользователей
+2. Рассылка одному или всем пользователям
+3. Установка/Отключение тех.работ
+4. Смена реквизитов
+5. Изменение ссылки поддержки
+
+##Функционал пользователя
+1. Покупка крипты
+2. Продажа крипты
+3. Обмен крипты
+4. Просмотр информации о компании
+5. Просмотр профиля
+```
